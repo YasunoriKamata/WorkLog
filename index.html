@@ -12,12 +12,16 @@
 
   <!-- スタイルシート -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.min.css">
   <!-- スクリプト -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="script.js?v=20250727"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.all.min.js"></script>
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+    integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M=" crossorigin="anonymous"></script>
+  <!-- キャッシュ対策のためにバージョン番号を付与。script.jsの更新時にこの番号を変更することで、ブラウザが新しいスクリプトを読み込むようにする。 -->
+  <script src="script.js?v=20260621"></script>
   <!-- PWA -->
   <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 </head>
@@ -34,7 +38,7 @@
           <label><input type="radio" name="location" value="1" disabled> 森戸海岸監視所</label>
           <label><input type="radio" name="location" value="2" disabled> 一色海岸監視所</label>
           <label><input type="radio" name="location" value="3" disabled> 長者ヶ崎海岸監視所</label>
-          <label><input type="radio" name="location" value="4" disabled> イベント</label>
+          <!-- <label><input type="radio" name="location" value="4" disabled> イベント</label> 2026/6/21 イベントは当システムでの入力廃止-->
         </div>
         <div class="form-group">
           <label for="date">日付</label>
@@ -111,7 +115,7 @@
         <button type="button" location="1">森戸海岸監視所</button>
         <button type="button" location="2">一色海岸監視所</button>
         <button type="button" location="3">長者ヶ崎海岸監視所</button>
-        <button type="button" location="4">イベント</button>
+        <!-- <button type="button" location="4">イベント</button> 2026/6/21 イベントは当システムでの入力廃止-->
       </div>
     </div>
   </div>

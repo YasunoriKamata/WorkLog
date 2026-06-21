@@ -70,8 +70,10 @@ function initAutocomplete() {
     delay: 0,
     change: function (_event, ui) {
       // フォーカスを外した時に候補に一致しない場合はクリア&警告
-      if (!ui.item || !availableCities.includes($(this).val())) {
+      const isValid = nameMasterCache.some(item => item[0] === $(this).val());
+      if (!isValid) {
         $(this).val('');
+        $(this).focus();
         Swal.fire({
           icon: "error",
           title: "Oops...",
